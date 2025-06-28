@@ -1,19 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  content: [
+    "./src/**/*.{html,ts}",
+  ],
   darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        primary: '#0d7766',
-        'primary-dark': '#40ad8a',
-        card: '#e2e0d9',
-        'card-dark': '#262626',
-        navbar: '#67977c',
-        'footer-dark': '#1F1F1F',
-      }
-    }
+        'primary': {
+          400: '#67977c', // nav-bg 
+          900: '#0d7766', // second-color
+        },
+        'secondary': {
+          500: '#40ad8a', // second-color dark mode
+        }
+      },
+    },
   },
-  content: ["./src/**/*.{html,ts}"],
-  plugins: []
+  plugins: [],
 }
-
