@@ -6,14 +6,18 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        title: ['"Righteous"', 'cursive'],
+        body: ['"Merriweather Sans"', 'sans-serif'],
+      },
       colors: {
-        'primary': {
+        primary: {
           400: '#67977c', // nav-bg 
           900: '#0d7766', // second-color
         },
-        'secondary': {
+        secondary: {
           500: '#40ad8a', // second-color dark mode
-        }
+        },
       },
     },
   },
