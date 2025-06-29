@@ -1,14 +1,21 @@
-<section class="max-w-6xl mx-auto px-4 py-8 mt-10">
-  <h2 class="text-3xl font-title text-gray-950 dark:text-gray-50 border-b-2 border-primary-900 dark:border-secondary-500 pb-2 mb-6">Sobre mí</h2>
+<section id="about-me" class="max-w-6xl mx-auto px-4 py-8 mt-10">
+  <h2 class="text-3xl font-title text-gray-950 dark:text-gray-50 border-b-2 border-teal-700 dark:border-emerald-500 pb-2 mb-6">
+    Sobre mí
+  </h2>
 
   <article class="mb-8 mt-3">
-    <p class="font-body text-gray-800 dark:text-gray-100">
+    <p class="font-body text-gray-800 dark:text-gray-100 mb-3">
       Tengo 20 años y actualmente estudio la carrera de Ingeniería de Software en la Universidad de las Fuerzas Armadas ESPE, donde me encuentro cursando el quinto semestre.
+    </p>
+    <p class="font-body text-gray-800 dark:text-gray-100 mb-3">
+      Me considero una persona autodidacta, curiosa y apasionada por el desarrollo de software. Disfruto enfrentar nuevos desafíos y aprender tecnologías que me permitan construir soluciones útiles e innovadoras.
     </p>
   </article>
 
   <article class="mb-8 mt-3">
-    <h3 class="ml-3 text-2xl font-title text-primary-900 dark:text-secondary-500 border-l-[0.33rem] pl-2 border-primary-900 dark:border-secondary-500 mb-4">Formación académica</h3>
+    <h3 class="ml-3 text-2xl font-title text-teal-700 dark:text-emerald-500 border-l-[0.33rem] pl-2 border-teal-700 dark:border-emerald-500 mb-4">
+      Formación académica
+    </h3>
     <ul class="list-none space-y-2 font-body text-gray-800 dark:text-gray-100">
       <li><strong>Educación Primaria:</strong> Unidad Educativa Estados Unidos</li>
       <li><strong>Educación Secundaria:</strong> Unidad Educativa Milenio Bicentenario</li>
@@ -17,11 +24,15 @@
   </article>
 
   <article class="mb-8 mt-3">
-    <h3 class="ml-3 text-2xl font-title text-primary-900 dark:text-secondary-500 border-l-[0.33rem] pl-2 border-primary-900 dark:border-secondary-500 mb-4">Tecnologías</h3>
+    <h3 class="ml-3 text-2xl font-title text-teal-700 dark:text-emerald-500 border-l-[0.33rem] pl-2 border-teal-700 dark:border-emerald-500 mb-4">
+      Tecnologías
+    </h3>
 
     <div class="mb-6">
-      <p class="mb-3 font-bold text-lg text-gray-950 dark:text-gray-50"><i class="fa-solid fa-code mr-2"></i>Lenguajes:</p>
-      <div class="flex flex-wrap gap-3">
+      <p class="mb-3 font-bold text-lg text-gray-950 dark:text-gray-50">
+        <i class="fa-solid fa-code mr-2 text-teal-600 dark:text-emerald-400"></i>Lenguajes:
+      </p>
+      <div class="flex flex-wrap gap-2">
         <app-skill-tag [name]="'Java'"></app-skill-tag>
         <app-skill-tag [name]="'C#'"></app-skill-tag>
         <app-skill-tag [name]="'JavaScript'"></app-skill-tag>
@@ -34,21 +45,24 @@
     </div>
 
     <div class="mb-6">
-      <p class="mb-3 font-bold text-lg text-gray-950 dark:text-gray-50"><i class="fa-solid fa-database mr-2"></i>Base de datos:</p>
-      <div class="flex flex-wrap gap-3">
+      <p class="mb-3 font-bold text-lg text-gray-950 dark:text-gray-50">
+        <i class="fa-solid fa-database mr-2 text-teal-600 dark:text-emerald-400"></i>Base de datos:
+      </p>
+      <div class="flex flex-wrap gap-2">
         <app-skill-tag [name]="'MongoDB'"></app-skill-tag>
         <app-skill-tag [name]="'SQL Server'"></app-skill-tag>
         <app-skill-tag [name]="'PostgreSQL'"></app-skill-tag>
         <app-skill-tag [name]="'MySQL'"></app-skill-tag>
         <app-skill-tag [name]="'SQLite'"></app-skill-tag>
         <app-skill-tag [name]="'Oracle'"></app-skill-tag>
-
       </div>
     </div>
 
     <div>
-      <p class="mb-3 font-bold text-lg text-gray-950 dark:text-gray-50"><i class="fa-solid fa-wrench mr-2"></i>Otras herramientas:</p>
-      <div class="flex flex-wrap gap-3">
+      <p class="mb-3 font-bold text-lg text-gray-950 dark:text-gray-50">
+        <i class="fa-solid fa-wrench mr-2 text-teal-600 dark:text-emerald-400"></i>Otras herramientas:
+      </p>
+      <div class="flex flex-wrap gap-2">
         <app-skill-tag [name]="'Git'"></app-skill-tag>
         <app-skill-tag [name]="'GitHub'"></app-skill-tag>
         <app-skill-tag [name]="'Visual Studio Code'"></app-skill-tag>
@@ -58,10 +72,34 @@
     </div>
   </article>
 
+  <article class="mb-8 mt-3">
+    <h3 class="ml-3 text-2xl font-title text-teal-700 dark:text-emerald-500 border-l-[0.33rem] pl-2 border-teal-700 dark:border-emerald-500 mb-4">
+      Idiomas
+    </h3>
+    <ul class="list-none space-y-2 font-body text-gray-800 dark:text-gray-100">
+      <li><strong>Español:</strong> Nativo</li>
+      <li><strong>Inglés:</strong> Nivel intermedio</li>
+    </ul>
+  </article>
+
+  <article class="mb-8 mt-3">
+    <h3 class="ml-3 text-2xl font-title text-teal-700 dark:text-emerald-500 border-l-[0.33rem] pl-2 border-teal-700 dark:border-emerald-500 mb-4">
+      Cursos
+    </h3>
+    <ul class="list-none space-y-2 font-body text-gray-800 dark:text-gray-100">
+      <li><strong>Fundational C# with Microsoft</strong> – Microsoft & FreeCodeCamp</li>
+      <li><strong>JavaScript Algorithms and Data Structures</strong> – FreeCodeCamp</li>
+      <li><strong>Curso básico de Python</strong> – Edutin Academy</li>
+    </ul>
+  </article>
+
   <article>
-    <h3 class="ml-3 mt-3 text-2xl font-title text-primary-900 dark:text-secondary-500 border-l-[0.33rem] pl-2 border-primary-900 dark:border-secondary-500 mb-4">Hobbies</h3>
+    <h3 class="ml-3 mt-3 text-2xl font-title text-teal-700 dark:text-emerald-500 border-l-[0.33rem] pl-2 border-teal-700 dark:border-emerald-500 mb-4">
+      Hobbies
+    </h3>
     <p class="font-body text-gray-800 dark:text-gray-100">
-      En mi tiempo libre me gusta practicar deportes, ver películas y tocar la guitarra.
+      En mi tiempo libre disfruto mantenerme activo practicando deportes y jugando fútbol. También valoro mucho los momentos en familia y con amigos. 
+      Me gusta relajarme viendo buenas películas y expresar mi creatividad tocando la guitarra, lo que me permite desconectarme y recargar energías.
     </p>
   </article>
 </section>
