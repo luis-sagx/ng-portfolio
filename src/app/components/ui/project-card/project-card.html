@@ -1,0 +1,24 @@
+<article class="bg-stone-200 dark:bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden w-full h-full p-4 transition-transform hover:scale-105">
+  <div class="flex flex-col gap-4 h-full">
+    <img [src]="image" [alt]="title" class="w-full h-48 object-cover rounded-md" />
+
+    <h3 class=" ml-2 text-xl font-title text-primary-900 dark:text-secondary-500 border-l-[0.33rem] pl-2 border-primary-900 dark:border-secondary-500">{{ title }}</h3>
+
+    <p class="text-sm font-body text-gray-950 dark:text-gray-100 flex-grow">
+      {{ description }}
+    </p>
+
+    <div class="flex flex-wrap gap-2 text-sm mt-2">
+      <app-skill-tag 
+        *ngFor="let tech of technologies" 
+        [name]="tech" class="mb-2">
+      </app-skill-tag>
+    </div>
+
+    <app-skill-tag 
+        [name]="'Código'" [variant]="'github'" [link]="link"
+        class="my-3">
+    </app-skill-tag>
+
+  </div>
+</article>

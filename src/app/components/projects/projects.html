@@ -1,0 +1,16 @@
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <h2 class="text-3xl font-title text-black dark:text-white border-b-2 border-primary-900 dark:border-secondary-500 pb-2 mb-8">
+    Proyectos Recientes
+  </h2>
+
+  <div class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
+    <app-project-card
+      *ngFor="let project of projects"
+      [image]="project.image"
+      [title]="project.title"
+      [description]="project.description"
+      [technologies]="project.technologies"
+      [link]="project.link"
+    ></app-project-card>
+  </div>
+</section>

@@ -9,4 +9,6 @@ import { Component, Input } from '@angular/core';
 })
 export class SkillTag {
   @Input() name: string = '';
+  @Input() variant: 'default' | 'github' = 'default';
+  @Input() link?: string;
 }
