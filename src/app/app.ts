@@ -5,11 +5,12 @@ import { Footer } from './components/layout/footer/footer';
 import { Hero } from './components/hero/hero';
 import { About } from './components/about/about';
 import { Projects } from './components/projects/projects';
+import { Contact } from './components/contact/contact';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Navbar, Footer, Hero, About, Projects],
+  imports: [RouterOutlet, Navbar, Footer, Hero, About, Projects, Contact],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
