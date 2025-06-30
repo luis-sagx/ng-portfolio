@@ -6,9 +6,10 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
-      fontFamily: {
-        title: ['"Righteous"', 'cursive'],
-        body: ['"Merriweather Sans"', 'sans-serif'],
+      colors: {
+        primary: {
+          400: '#67977c'
+        }
       },
     },
   },
