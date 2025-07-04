@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ThemeToggle } from '../../ui/theme-toggle/theme-toggle';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -12,5 +12,9 @@ import { CommonModule } from '@angular/common';
 })
 
 export class Navbar {
-  isMenuOpen = false;
+  isMenuOpen = signal(false);
+
+  toggleMenu() {
+    this.isMenuOpen.update(open => !open);
+  }
 }
