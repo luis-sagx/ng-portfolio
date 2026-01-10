@@ -19,7 +19,7 @@ export const PROJECTS: Project[] = [
     image: 'assets/img/sagxup.jpg',
     title: 'Sagx UP - Financial Control',
     description:
-      'Mobile application for personal financial management, including IA',
+      'Mobile application for personal financial management, including AI Assistant.',
     technologies: ['Flutter', 'Firebase', 'AI Google Studio'],
     link: 'https://github.com/luis-sagx/sagx-up',
     githubUrl: 'https://github.com/luis-sagx/sagx-up',
