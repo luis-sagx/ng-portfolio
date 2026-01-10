@@ -21,8 +21,8 @@ export const PROJECTS: Project[] = [
     description:
       'Mobile application for personal financial management, including IA',
     technologies: ['Flutter', 'Firebase', 'AI Google Studio'],
-    link: 'https://github.com/luis-sagx/financial-control',
-    githubUrl: 'https://github.com/luis-sagx/financial-control',
+    link: 'https://github.com/luis-sagx/sagx-up',
+    githubUrl: 'https://github.com/luis-sagx/sagx-up',
     highlights: [
       'AI-driven financial insights',
       'Real-time expense tracking',
@@ -98,8 +98,8 @@ export const PROJECTS: Project[] = [
     description:
       'Web application for managing and tracking personal expenses effectively.',
     technologies: ['React', 'Typescript', 'Tailwind CSS'],
-    link: 'https://github.com/sagxluis/expense-control.git',
-    githubUrl: 'https://github.com/sagxluis/expense-control.git',
+    link: 'https://github.com/luis-sagx/expense-control.git',
+    githubUrl: 'https://github.com/luis-sagx/expense-control.git',
     highlights: [
       'Intuitive user interface',
       'Real-time expense tracking',
