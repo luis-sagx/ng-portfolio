@@ -1,25 +1,5 @@
-<ng-container *ngIf="variant === 'github'; else defaultTag">
-  <a 
-    [href]="link" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    [ngClass]="{
-      'bg-white text-gray-950 dark:bg-gray-950 dark:text-white border-gray-950 dark:border-white': variant === 'github'
-    }"
-    class="inline-flex items-center gap-1 px-3.5 py-1 rounded-lg border font-bold font-serif hover:no-underline"
-  >
-    <i class="fab fa-github"></i>
-    {{ name }}
-  </a>
-</ng-container>
-
-<ng-template #defaultTag>
-  <span
-    [ngClass]="{
-      'bg-teal-700 dark:bg-emerald-600 text-white border-gray-950 dark:border-gray-50': variant === 'default'
-    }"
-    class="inline-flex items-center gap-1 px-3.5 py-1 rounded-lg border font-bold font-serif"
-  >
-    {{ name }}
-  </span>
-</ng-template>
+<span
+ class="inline-block px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/50 rounded-lg hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-100 dark:hover:bg-emerald-900/30 transition-all"
+>
+ {{ name }}
+</span>

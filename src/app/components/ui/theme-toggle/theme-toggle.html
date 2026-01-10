@@ -1,3 +1,15 @@
-<button (click)="toggleTheme()" class="text-gray-50 text-2xl" aria-label="Toggle theme">
-  <i class="fas hover:scale-110 transition-transform duration-300" [ngClass]="darkMode() ? 'fa-sun' : 'fa-moon'"></i>
+<button
+  (click)="toggleTheme()"
+  class="p-2.5 rounded-lg dark:bg-gray-800 border border-emerald-500/60 hover:border-emerald-500/90 transition-all group w-10"
+  [attr.aria-label]="isDarkMode() ? 'Switch to light mode' : 'Switch to dark mode'"
+>
+  @if (isDarkMode()) {
+  <i
+    class="text-lg text-white transition-transform duration-300 fas fa-sun group-hover:rotate-90"
+  ></i>
+  } @else {
+  <i
+    class="text-lg text-white transition-transform duration-300 fas fa-moon group-hover:-rotate-12"
+  ></i>
+  }
 </button>
