@@ -1,18 +1,38 @@
-<section id="projects" class="max-w-6xl mx-auto px-4 py-12">
-  <h2
-    class="text-2xl font-serif font-bold text-black dark:text-white border-b-2 border-teal-700 dark:border-emerald-400 pb-2 mb-8"
-  >
-    Recent Projects
-  </h2>
+<section id="projects" class="px-6 py-20 bg-gray-50 dark:bg-gray-950">
+  <div class="mx-auto max-w-7xl">
+    <!-- Section Header -->
+    <div class="mb-16 text-center">
+      <div class="inline-block mb-4">
+        <span
+          class="text-sm font-semibold tracking-wider uppercase text-emerald-600 dark:text-emerald-400"
+          >Portfolio</span
+        >
+      </div>
+      <h2
+        class="mb-4 text-4xl font-bold text-gray-900 lg:text-5xl dark:text-white"
+      >
+        Featured
+        <span
+          class="text-transparent bg-gradient-to-r from-emerald-600 to-teal-600 dark:from-emerald-400 dark:to-teal-400 bg-clip-text"
+        >
+          Projects
+        </span>
+      </h2>
+    </div>
 
-  <div class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
-    <app-project-card
-      *ngFor="let project of projects"
-      [image]="project.image"
-      [title]="project.title"
-      [description]="project.description"
-      [technologies]="project.technologies"
-      [link]="project.link"
-    ></app-project-card>
+    <!-- Projects Grid -->
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      @for (project of projects; track project.title) {
+      <app-project-card
+        [title]="project.title"
+        [description]="project.description"
+        [image]="project.image"
+        [github]="project.githubUrl"
+        [link]="project.link"
+        [tags]="project.technologies"
+        [highlights]="project.highlights"
+      ></app-project-card>
+      }
+    </div>
   </div>
 </section>
