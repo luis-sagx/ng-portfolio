@@ -2,7 +2,7 @@ import { Project } from '../models/portfolio.model';
 
 export const PROJECTS: Project[] = [
   {
-    image: 'assets/img/cinema.png',
+    image: 'assets/img/cinema.webp',
     title: 'Cinema System',
     description:
       'Web application for managing movie theater operations, including showtimes.',
@@ -16,7 +16,7 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    image: 'assets/img/sagxup.jpg',
+    image: 'assets/img/sagxup.webp',
     title: 'Sagx UP - Financial Control',
     description:
       'Mobile application for personal financial management, including AI Assistant.',
@@ -30,7 +30,7 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    image: 'assets/img/sureno.png',
+    image: 'assets/img/sureno.webp',
     title: 'Online Liquor Store "Sureño"',
     description:
       'Website designed for selling and managing liquors from the "Sureño" brand.',
@@ -51,7 +51,7 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    image: 'assets/img/carta.png',
+    image: 'assets/img/carta.webp',
     title: 'Letter Sending "Simply Lovely"',
     description:
       'Interactive platform for children to create, customize, and send digital letters.',
@@ -72,7 +72,7 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    image: 'assets/img/hospital.png',
+    image: 'assets/img/hospital.webp',
     title: 'Hospital Management System',
     description:
       'Web application for managing medical appointments and treatments.',
@@ -93,7 +93,7 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    image: 'assets/img/control.png',
+    image: 'assets/img/control.webp',
     title: 'Expense Control',
     description:
       'Web application for managing and tracking personal expenses effectively.',

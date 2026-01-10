@@ -6,11 +6,16 @@
     class="relative h-56 overflow-hidden bg-gradient-to-br from-emerald-100 to-teal-100 dark:from-emerald-950/40 dark:to-teal-950/40"
   >
     @if (image) {
-    <img
-      [src]="image"
-      [alt]="title"
-      class="object-contain w-full h-full transition-all duration-500 group-hover:scale-105"
-    />
+    <picture>
+      <source [srcset]="getImagePath('avif')" type="image/avif" />
+      <source [srcset]="image" type="image/webp" />
+      <img
+        [src]="getImagePath('png')"
+        [alt]="title"
+        loading="lazy"
+        class="object-contain w-full h-full transition-all duration-500 group-hover:scale-105"
+      />
+    </picture>
     <div
       class="absolute inset-0 transition-opacity duration-500 opacity-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent group-hover:opacity-100"
     ></div>
