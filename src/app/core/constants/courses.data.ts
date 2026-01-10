@@ -8,6 +8,12 @@ export const COURSES: Course[] = [
       'https://www.udemy.com/certificate/UC-8edd265d-f9a0-44f3-998d-dbbb910498f8/',
   },
   {
+    title: 'Introduction to Cybersecurity',
+    provider: 'Cisco Networking Academy',
+    certificateUrl:
+      'https://www.credly.com/badges/c7ca2164-f09b-4998-a049-390d36a8a7d5/public_url',
+  },
+  {
     title: 'Foundational C# with Microsoft',
     provider: 'FreeCodeCamp',
     certificateUrl:
