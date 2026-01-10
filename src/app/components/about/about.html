@@ -145,13 +145,24 @@
           </div>
           <div class="space-y-4">
             @for (course of courses; track course.title) {
-            <div>
-              <p class="text-sm font-medium text-gray-700 dark:text-gray-300">
-                {{ course.title }}
-              </p>
-              <p class="mt-1 text-xs text-gray-500 dark:text-gray-500">
-                {{ course.provider }}
-              </p>
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <p class="text-sm font-medium text-gray-700 dark:text-gray-300">
+                  {{ course.title }}
+                </p>
+                <p class="mt-1 text-xs text-gray-500 dark:text-gray-500">
+                  {{ course.provider }}
+                </p>
+              </div>
+              <a
+                [href]="course.certificateUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center flex-shrink-0 w-8 h-8 transition-all duration-200 rounded-lg text-emerald-600 dark:text-emerald-400 hover:bg-emerald-100 dark:hover:bg-emerald-950/30 hover:scale-110"
+                title="View Certificate"
+              >
+                <i class="text-sm fas fa-external-link-alt"></i>
+              </a>
             </div>
             }
           </div>
