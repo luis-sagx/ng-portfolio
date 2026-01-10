@@ -1,63 +1,171 @@
 <section
   id="start"
-  class="bg-stone-200 dark:bg-gray-900 mt-8 py-16 px-6 flex items-center"
+  class="relative flex items-center justify-center min-h-screen px-6 py-20 overflow-hidden bg-gradient-to-br from-gray-100 via-emerald-50/40 to-teal-50/50 dark:from-gray-950 dark:via-emerald-950/20 dark:to-teal-950/30"
 >
-  <div class="mx-auto" data-aos="fade-up">
-    <div class="flex flex-col lg:flex-row items-center gap-12">
-      <div class="foto flex-shrink-0 relative group">
-        <div
-          class="absolute -inset-2 rounded-full bg-gradient-to-tr from-teal-400 via-teal-700 to-emerald-500 opacity-25 group-hover:opacity-40 transition-opacity duration-500 blur-xl"
-        ></div>
+  <!-- Animated background decoration -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div
+      class="absolute rounded-full -top-40 -right-40 w-80 h-80 bg-emerald-200/20 dark:bg-emerald-500/10 blur-3xl animate-pulse"
+    ></div>
+    <div
+      class="absolute delay-1000 rounded-full -bottom-40 -left-40 w-96 h-96 bg-teal-200/20 dark:bg-teal-500/10 blur-3xl animate-pulse"
+    ></div>
+  </div>
 
-        <img
-          src="https://avatars.githubusercontent.com/u/144053683?v=4"
-          alt="Foto de Luis Sagnay"
-          class="relative z-10 w-64 h-64 lg:w-80 lg:h-80 rounded-full object-cover border-4 border-white dark:border-gray-700 group-hover:scale-105 transition-transform duration-500 ease-in-out shadow-xl"
-        />
-      </div>
-
-      <div class="info text-center lg:text-left flex-1">
-        <div class="space-y-4">
-          <h1
-            class="text-5xl font-serif lg:text-5xl font-bold text-gray-900 dark:text-gray-100"
-          >
-            Hello, I'm
-            <span class="text-teal-700 dark:text-emerald-500">
-              Luis Sagnay
-            </span>
-          </h1>
-
-          <h3
-            class="font-serif text-xl lg:text-xl text-gray-800 dark:text-gray-300 max-w-2xl font-semibold"
-          >
-            Student at Universidad de las Fuerzas Armadas ESPE
-          </h3>
-
-          <h4
-            class="font-serif text-lg lg:text-lg text-teal-700 dark:text-emerald-500 font-semibold"
-          >
-            Software Engineering Major
-          </h4>
-
+  <div class="relative max-w-6xl mx-auto">
+    <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+      <!-- Profile Image -->
+      <div class="flex justify-center order-1 lg:justify-end lg:order-2">
+        <div class="relative group">
+          <!-- Glow effect -->
           <div
-            class="flex flex-col sm:flex-row gap-6 mt-10 justify-center lg:justify-start"
-          >
-            <a
-              href="#projects"
-              class="bg-teal-700 font-serif text-white px-5 py-2 rounded-2xl font-semibold shadow-md hover:border-2 hover:border-teal-700 hover:scale-105 transition-transform duration-300 dark:bg-emerald-600 dark:hover:border-emerald-700 dark:hover:text-white"
-            >
-              View Projects
-            </a>
+            class="absolute transition duration-500 rounded-full opacity-50 -inset-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 blur-lg group-hover:opacity-75"
+          ></div>
 
-            <a
-              href="#contact"
-              class="border-2 border-teal-700 font-serif text-teal-700 px-5 py-2 rounded-2xl font-semibold shadow-md hover:bg-teal-700 hover:text-white hover:scale-105 transition-transform duration-300 dark:border-emerald-600 dark:text-white dark:hover:bg-emerald-600"
-            >
-              Contact
-            </a>
+          <div class="relative">
+            <img
+              src="https://avatars.githubusercontent.com/u/144053683?v=4"
+              alt="Luis Sagnay - Software Developer"
+              class="relative object-cover w-64 h-64 transition duration-500 transform border-4 border-white rounded-full shadow-sm lg:w-80 lg:h-80 dark:border-gray-800 group-hover:scale-105"
+            />
           </div>
         </div>
       </div>
+
+      <!-- Content -->
+      <div class="order-2 space-y-6 text-center lg:text-left lg:order-1">
+        <!-- Greeting -->
+        <div class="inline-block">
+          <span
+            class="text-lg font-semibold tracking-wide text-emerald-600 dark:text-emerald-400"
+            >👋 Hello, I'm</span
+          >
+        </div>
+
+        <!-- Name -->
+        <h1
+          class="text-5xl font-bold leading-tight text-gray-900 lg:text-6xl xl:text-7xl dark:text-white"
+        >
+          Luis
+          <span
+            class="text-transparent bg-gradient-to-r from-emerald-600 to-teal-600 dark:from-emerald-400 dark:to-teal-400 bg-clip-text"
+          >
+            Sagnay
+          </span>
+        </h1>
+
+        <!-- Title -->
+        <h2
+          class="text-2xl font-semibold text-gray-700 lg:text-3xl dark:text-gray-300"
+        >
+          Software Engineer
+        </h2>
+
+        <!-- Specializations -->
+        <div class="flex flex-wrap justify-center gap-3 lg:justify-start">
+          <span
+            class="px-4 py-2 text-sm font-medium border rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800"
+          >
+            Web Development
+          </span>
+          <span
+            class="px-4 py-2 text-sm font-medium text-teal-700 bg-teal-100 border border-teal-200 rounded-full dark:bg-teal-900/30 dark:text-teal-300 dark:border-teal-800"
+          >
+            Mobile Development
+          </span>
+          <span
+            class="px-4 py-2 text-sm font-medium border rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800"
+          >
+            Cybersecurity
+          </span>
+        </div>
+
+        <!-- Description -->
+        <p
+          class="max-w-2xl text-lg leading-relaxed text-gray-600 dark:text-gray-400"
+        >
+          21-year-old Software Engineering student at
+          <span class="font-semibold text-emerald-600 dark:text-emerald-400"
+            >Universidad de las Fuerzas Armadas ESPE</span
+          >. Self-taught developer passionate about building innovative
+          solutions and facing new challenges.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div
+          class="flex flex-col justify-center gap-4 pt-4 sm:flex-row lg:justify-start"
+        >
+          <a
+            href="assets/cv/Luis_Sagnay_CV.pdf"
+            download="Luis_Sagnay_CV.pdf"
+            class="flex items-center justify-center gap-2 px-8 py-4 font-semibold text-white transition-all duration-300 transform shadow-lg group bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-xl hover:shadow-xl hover:-translate-y-1"
+          >
+            Download my CV
+            <i class="text-lg fas fa-download group-hover:animate-bounce"></i>
+          </a>
+          <a
+            href="#contact"
+            class="flex items-center justify-center gap-2 px-8 py-4 font-semibold transition-all duration-300 transform bg-white border-2 shadow-lg dark:bg-gray-800 text-emerald-600 dark:text-emerald-400 rounded-xl border-emerald-600 dark:border-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/30 hover:shadow-xl hover:-translate-y-1"
+          >
+            Get in Touch
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Social Links -->
+        <div class="flex justify-center gap-4 pt-6 lg:justify-start">
+          <a
+            href="https://github.com/luis-sagx"
+            target="_blank"
+            class="flex items-center justify-center w-12 h-12 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full dark:bg-gray-800 dark:text-gray-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/30 hover:text-emerald-600 dark:hover:text-emerald-400 hover:scale-110"
+          >
+            <i class="text-xl fab fa-github"></i>
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            class="flex items-center justify-center w-12 h-12 text-gray-700 transition-all duration-300 bg-gray-200 rounded-full dark:bg-gray-800 dark:text-gray-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/30 hover:text-emerald-600 dark:hover:text-emerald-400 hover:scale-110"
+          >
+            <i class="text-xl fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div
+      class="absolute transform -translate-x-1/2 bottom-8 left-1/2 animate-bounce"
+    >
+      <a
+        href="#projects"
+        class="text-gray-400 transition-colors dark:text-gray-600 hover:text-emerald-600 dark:hover:text-emerald-400"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          ></path>
+        </svg>
+      </a>
     </div>
   </div>
 </section>
