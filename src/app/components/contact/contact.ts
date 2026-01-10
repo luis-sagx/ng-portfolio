@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { CONTACT_INFO } from '../../core/constants';
+import { ContactInfo } from '../../core/models/portfolio.model';
 
 @Component({
   selector: 'app-contact',
   imports: [],
   templateUrl: './contact.html',
-  styleUrl: './contact.css'
+  styleUrl: './contact.css',
 })
 export class Contact {
-
+  readonly contactInfo: ContactInfo = CONTACT_INFO;
 }
