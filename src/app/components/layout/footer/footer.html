@@ -1,5 +1,65 @@
-<footer class="bg-primary-400 dark:bg-gray-800 text-white py-6 mt-10">
-  <div class="max-w-7xl mx-auto px-6">
-    <p class="text-center font-medium font-serif">Luis Sagnay © 2025 Mi Portafolio. Todos los derechos reservados.</p>
+<footer
+  class="py-12 text-gray-300 bg-gray-900 border-t border-gray-800 dark:bg-gray-950"
+>
+  <div class="px-6 mx-auto max-w-7xl">
+    <div class="flex flex-col items-center gap-6">
+      <!-- Brand -->
+      <div class="text-center">
+        <h3
+          class="mb-2 text-2xl font-bold text-transparent bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text"
+        >
+          Luis Sagnay
+        </h3>
+        <p class="text-sm text-gray-400">
+          Software Engineer | Web & Mobile Developer
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="flex gap-8 text-sm">
+        <a href="#start" class="transition-colors hover:text-emerald-400"
+          >Home</a
+        >
+        <a href="#projects" class="transition-colors hover:text-emerald-400"
+          >Projects</a
+        >
+        <a href="#about-me" class="transition-colors hover:text-emerald-400"
+          >About</a
+        >
+        <a href="#contact" class="transition-colors hover:text-emerald-400"
+          >Contact</a
+        >
+      </div>
+
+      <!-- Social Links -->
+      <div class="flex gap-4">
+        <a
+          href="https://github.com/luis-sagx"
+          target="_blank"
+          class="flex items-center justify-center w-10 h-10 transition-all duration-300 bg-gray-800 rounded-full hover:bg-emerald-600 hover:scale-110"
+          aria-label="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/luis-sagnay-030b8b361/"
+          target="_blank"
+          class="flex items-center justify-center w-10 h-10 transition-all duration-300 bg-gray-800 rounded-full hover:bg-emerald-600 hover:scale-110"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+
+      <!-- Divider -->
+      <div
+        class="w-full h-px max-w-md bg-gradient-to-r from-transparent via-gray-700 to-transparent"
+      ></div>
+
+      <!-- Copyright -->
+      <div class="text-sm text-center text-gray-500">
+        <p>© {{ currentYear }} Luis Sagnay. All rights reserved.</p>
+      </div>
+    </div>
   </div>
 </footer>
