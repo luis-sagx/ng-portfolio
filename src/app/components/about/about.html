@@ -1,143 +1,210 @@
-<section id="about-me" class="max-w-6xl px-4 py-10 mx-auto mt-10 font-serif">
-  <h2
-    class="pb-2 mb-8 text-2xl font-bold border-b-2 border-teal-700 text-gray-950 dark:text-gray-50 dark:border-emerald-400"
-  >
-    About Me
-  </h2>
+<section
+  id="about-me"
+  class="px-6 py-20 bg-gradient-to-br from-gray-100 via-emerald-50/30 to-teal-50/30 dark:from-gray-900 dark:via-emerald-950/10 dark:to-teal-950/10"
+>
+  <div class="mx-auto max-w-7xl">
+    <!-- Section Header -->
+    <div class="mb-16 text-center">
+      <div class="inline-block mb-4">
+        <span
+          class="text-sm font-semibold tracking-wider uppercase text-emerald-600 dark:text-emerald-400"
+          >Get to know me</span
+        >
+      </div>
+      <h2
+        class="mb-4 text-4xl font-bold text-gray-900 lg:text-5xl dark:text-white"
+      >
+        About
+        <span
+          class="text-transparent bg-gradient-to-r from-emerald-600 to-teal-600 dark:from-emerald-400 dark:to-teal-400 bg-clip-text"
+        >
+          Me
+        </span>
+      </h2>
+    </div>
 
-  <article class="mb-10">
-    <p class="mb-4 text-gray-800 dark:text-gray-100">
-      I am 21 years old and currently studying Software Engineering at
-      Universidad de las Fuerzas Armadas ESPE.
-    </p>
-    <p class="mb-4 text-gray-800 dark:text-gray-100">
-      I consider myself a self-taught, curious person passionate about software
-      development. I enjoy facing new challenges and learning technologies that
-      allow me to build useful and innovative solutions.
-    </p>
-  </article>
-
-  <article class="mb-10">
-    <h3
-      class="ml-3 text-xl font-bold text-teal-700 dark:text-emerald-400 border-l-[0.33rem] pl-3 border-teal-700 dark:border-emerald-400 mb-4"
+    <!-- Technical Skills - First, Full Width -->
+    <div
+      class="p-8 mb-8 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
     >
-      Academic Background
-    </h3>
-    <ul class="space-y-2 text-gray-800 list-none dark:text-gray-100">
-      <li>
-        <strong>Primary Education:</strong> Unidad Educativa Estados Unidos
-      </li>
-      <li>
-        <strong>Secondary Education:</strong> Unidad Educativa Milenio
-        Bicentenario
-      </li>
-      <li>
-        <strong>Higher Education:</strong> Universidad de las Fuerzas Armadas
-        ESPE (2022 - present)
-      </li>
-    </ul>
-  </article>
+      <div class="flex items-center gap-3 mb-8">
+        <div
+          class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500"
+        >
+          <i class="text-xl text-white fas fa-code"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+          Technical Skills
+        </h3>
+      </div>
 
-  <article class="mb-10">
-    <h3
-      class="ml-3 text-xl font-bold text-teal-700 dark:text-emerald-400 border-l-[0.33rem] pl-3 border-teal-700 dark:border-emerald-400 mb-4"
-    >
-      Technologies
-    </h3>
-
-    <div class="mb-6">
-      <p class="mb-3 text-lg font-bold text-gray-950 dark:text-gray-50">
-        <i class="mr-2 text-teal-600 fa-solid fa-code dark:text-emerald-500"></i
-        >Languages:
-      </p>
-      <div class="flex flex-wrap gap-2 text-sm">
-        <app-skill-tag [name]="'Java'"></app-skill-tag>
-        <app-skill-tag [name]="'C#'"></app-skill-tag>
-        <app-skill-tag [name]="'JavaScript'"></app-skill-tag>
-        <app-skill-tag [name]="'HTML'"></app-skill-tag>
-        <app-skill-tag [name]="'CSS'"></app-skill-tag>
-        <app-skill-tag [name]="'Python'"></app-skill-tag>
-        <app-skill-tag [name]="'C++'"></app-skill-tag>
-        <app-skill-tag [name]="'TypeScript'"></app-skill-tag>
+      <div class="grid gap-8 md:grid-cols-2">
+        @for (category of skillCategories; track category.title) {
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <i
+              class="{{ category.icon }} text-emerald-600 dark:text-emerald-400 text-lg"
+            ></i>
+            <h4 class="text-lg font-bold text-gray-800 dark:text-gray-200">
+              {{ category.title }}
+            </h4>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            @for (skill of category.skills; track skill.name) {
+            <div
+              class="px-4 py-2 transition-all duration-300 border rounded-lg bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 border-emerald-200 dark:border-emerald-800/50 hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-lg hover:scale-105"
+            >
+              <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">
+                {{ skill.name }}
+              </p>
+            </div>
+            }
+          </div>
+        </div>
+        }
       </div>
     </div>
 
-    <div class="mb-6">
-      <p class="mb-3 text-lg font-bold text-gray-950 dark:text-gray-50">
-        <i
-          class="mr-2 text-teal-600 fa-solid fa-database dark:text-emerald-500"
-        ></i
-        >Databases:
-      </p>
-      <div class="flex flex-wrap gap-2 text-sm">
-        <app-skill-tag [name]="'MongoDB'"></app-skill-tag>
-        <app-skill-tag [name]="'SQL Server'"></app-skill-tag>
-        <app-skill-tag [name]="'PostgreSQL'"></app-skill-tag>
-        <app-skill-tag [name]="'MySQL'"></app-skill-tag>
-        <app-skill-tag [name]="'SQLite'"></app-skill-tag>
-        <app-skill-tag [name]="'Oracle'"></app-skill-tag>
+    <!-- Education, Languages & Certifications - Two Column Layout -->
+    <div class="grid gap-6 mb-8 lg:grid-cols-2">
+      <!-- Left Column: Education & Languages -->
+      <div class="space-y-6">
+        <!-- Education Card -->
+        <div
+          class="p-6 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
+        >
+          <div class="flex items-center gap-3 mb-4">
+            <div
+              class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500"
+            >
+              <i class="text-xl text-white fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">
+              Education
+            </h3>
+          </div>
+          @for (edu of education; track edu.institution) {
+          <div class="space-y-2">
+            <p class="font-semibold text-emerald-600 dark:text-emerald-400">
+              {{ edu.degree }}
+            </p>
+            <p class="text-sm font-medium text-gray-700 dark:text-gray-300">
+              {{ edu.institution }}
+            </p>
+            <p class="text-sm text-gray-500 dark:text-gray-500">
+              {{ edu.period }}
+            </p>
+          </div>
+          }
+        </div>
+
+        <!-- Languages Card -->
+        <div
+          class="p-6 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
+        >
+          <div class="flex items-center gap-3 mb-4">
+            <div
+              class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-emerald-500"
+            >
+              <i class="text-xl text-white fas fa-language"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">
+              Languages
+            </h3>
+          </div>
+          <div class="space-y-3">
+            @for (language of languages; track language.name) {
+            <div class="flex items-center justify-between">
+              <span class="font-medium text-gray-700 dark:text-gray-300"
+                >{{ language.name }}</span
+              >
+              <span
+                class="text-sm font-semibold text-emerald-600 dark:text-emerald-400"
+                >{{ language.proficiency }}</span
+              >
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Certifications -->
+      <div>
+        <div
+          class="h-full p-6 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
+        >
+          <div class="flex items-center gap-3 mb-4">
+            <div
+              class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500"
+            >
+              <i class="text-xl text-white fas fa-certificate"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">
+              Certifications
+            </h3>
+          </div>
+          <div class="space-y-4">
+            @for (course of courses; track course.title) {
+            <div>
+              <p class="text-sm font-medium text-gray-700 dark:text-gray-300">
+                {{ course.title }}
+              </p>
+              <p class="mt-1 text-xs text-gray-500 dark:text-gray-500">
+                {{ course.provider }}
+              </p>
+            </div>
+            }
+          </div>
+        </div>
       </div>
     </div>
 
-    <div>
-      <p class="mb-3 text-lg font-bold text-gray-950 dark:text-gray-50">
-        <i
-          class="mr-2 text-teal-600 fa-solid fa-wrench dark:text-emerald-500"
-        ></i
-        >Other Tools:
+    <!-- Beyond Code - Same style as other cards -->
+    <div
+      class="p-8 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
+    >
+      <div class="flex items-center gap-3 mb-4">
+        <div
+          class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500"
+        >
+          <i class="text-xl text-white fas fa-heart"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+          Beyond Code
+        </h3>
+      </div>
+      <p class="mb-6 leading-relaxed text-gray-600 dark:text-gray-400">
+        In my free time, I enjoy staying active by playing sports and soccer. I
+        also greatly value time with family and friends. I like to relax by
+        watching good movies and expressing my creativity by playing guitar,
+        which allows me to disconnect and recharge.
       </p>
-      <div class="flex flex-wrap gap-2 text-sm">
-        <app-skill-tag [name]="'Git'"></app-skill-tag>
-        <app-skill-tag [name]="'GitHub'"></app-skill-tag>
-        <app-skill-tag [name]="'Visual Studio Code'"></app-skill-tag>
-        <app-skill-tag [name]="'Postman'"></app-skill-tag>
-        <app-skill-tag [name]="'Docker'"></app-skill-tag>
+      <div class="flex flex-wrap gap-3">
+        <span
+          class="flex items-center gap-2 px-4 py-2 text-sm font-semibold border rounded-lg bg-emerald-100 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/50"
+        >
+          <i class="fas fa-futbol"></i>
+          Soccer
+        </span>
+        <span
+          class="flex items-center gap-2 px-4 py-2 text-sm font-semibold border rounded-lg bg-emerald-100 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/50"
+        >
+          <i class="fas fa-guitar"></i>
+          Guitar
+        </span>
+        <span
+          class="flex items-center gap-2 px-4 py-2 text-sm font-semibold border rounded-lg bg-emerald-100 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/50"
+        >
+          <i class="fas fa-dumbbell"></i>
+          Excercice
+        </span>
+        <span
+          class="flex items-center gap-2 px-4 py-2 text-sm font-semibold border rounded-lg bg-emerald-100 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/50"
+        >
+          <i class="fas fa-book"></i>
+          Read
+        </span>
       </div>
     </div>
-  </article>
-
-  <article class="mb-10">
-    <h3
-      class="ml-3 text-xl font-bold text-teal-700 dark:text-emerald-400 border-l-[0.33rem] pl-3 border-teal-700 dark:border-emerald-400 mb-4"
-    >
-      Languages
-    </h3>
-    <ul class="space-y-2 text-gray-800 list-none dark:text-gray-100">
-      <li><strong>Spanish:</strong> Native</li>
-      <li><strong>English:</strong> Intermediate level</li>
-    </ul>
-  </article>
-
-  <article class="mb-10">
-    <h3
-      class="ml-3 text-xl font-bold text-teal-700 dark:text-emerald-400 border-l-[0.33rem] pl-3 border-teal-700 dark:border-emerald-400 mb-4"
-    >
-      Courses
-    </h3>
-    <ul class="space-y-2 text-gray-800 list-none dark:text-gray-100">
-      <li>
-        <strong>Fundational C# with Microsoft</strong> – Microsoft &
-        FreeCodeCamp
-      </li>
-      <li>
-        <strong>JavaScript Algorithms and Data Structures</strong> –
-        FreeCodeCamp
-      </li>
-      <li><strong>Basic Python Course</strong> – Edutin Academy</li>
-    </ul>
-  </article>
-
-  <article>
-    <h3
-      class="ml-3 mt-3 text-xl font-bold text-teal-700 dark:text-emerald-400 border-l-[0.33rem] pl-3 border-teal-700 dark:border-emerald-400 mb-4"
-    >
-      Hobbies
-    </h3>
-    <p class="text-gray-800 dark:text-gray-100">
-      In my free time, I enjoy staying active by playing sports and soccer. I
-      also greatly value time with family and friends. I like to relax by
-      watching good movies and expressing my creativity by playing guitar, which
-      allows me to disconnect and recharge.
-    </p>
-  </article>
+  </div>
 </section>
