@@ -6,30 +6,36 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     icon: 'fa-solid fa-code',
     skills: [
       { name: 'Java' },
-      { name: 'C#' },
       { name: 'JavaScript' },
       { name: 'TypeScript' },
       { name: 'Python' },
       { name: 'C++' },
+      { name: 'C#' },
     ],
   },
+
   {
-    title: 'Web Technologies',
-    icon: 'fa-brands fa-html5',
-    skills: [{ name: 'HTML' }, { name: 'CSS' }, { name: 'Tailwind CSS' }],
-  },
-  {
-    title: 'Frameworks & Libraries',
-    icon: 'fa-solid fa-layer-group',
+    title: 'Frontend',
+    icon: 'fa-solid fa-desktop',
     skills: [
       { name: 'Angular' },
       { name: 'React' },
-      { name: 'Node.js' },
-      { name: 'Express' },
-      { name: 'Flask' },
-      { name: 'Spring Boot' },
+      { name: 'Tailwind CSS' },
+      { name: 'Flutter' },
     ],
   },
+  {
+    title: 'Backend',
+    icon: 'fa-solid fa-server',
+    skills: [
+      { name: 'Node.js' },
+      { name: 'Express' },
+      { name: 'Spring Boot' },
+      { name: 'Flask' },
+      { name: 'ASP.NET Core' },
+    ],
+  },
+
   {
     title: 'Databases',
     icon: 'fa-solid fa-database',
@@ -42,15 +48,15 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     ],
   },
   {
-    title: 'Tools & Technologies',
+    title: 'Tools & DevOps',
     icon: 'fa-solid fa-wrench',
     skills: [
       { name: 'Git' },
       { name: 'GitHub' },
-      { name: 'VS Code' },
-      { name: 'Postman' },
       { name: 'Docker' },
       { name: 'Linux' },
+      { name: 'Postman' },
+      { name: 'VS Code' },
     ],
   },
 ];

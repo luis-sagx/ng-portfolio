@@ -20,7 +20,12 @@ export const PROJECTS: Project[] = [
     title: 'Sagx UP - Financial Control',
     description:
       'Mobile application for personal financial management, including AI Assistant.',
-    technologies: ['Flutter', 'Firebase', 'AI Google Studio'],
+    technologies: [
+      'Flutter',
+      'Firebase',
+      'AI Google Studio',
+      'Material Design 3',
+    ],
     link: 'https://github.com/luis-sagx/sagx-up',
     githubUrl: 'https://github.com/luis-sagx/sagx-up',
     highlights: [
@@ -31,7 +36,7 @@ export const PROJECTS: Project[] = [
   },
   {
     image: 'assets/img/sureno.webp',
-    title: 'Online Liquor Store "Sureño"',
+    title: 'Ecommerce "Sureño"',
     description:
       'Website designed for selling and managing liquors from the "Sureño" brand.',
     technologies: [
@@ -80,7 +85,7 @@ export const PROJECTS: Project[] = [
       'HTML',
       'CSS',
       'JavaScript',
-      'C#',
+      'ASP.NET Core',
       'SQL Server',
       'Bootstrap',
     ],
@@ -97,7 +102,7 @@ export const PROJECTS: Project[] = [
     title: 'Expense Control',
     description:
       'Web application for managing and tracking personal expenses effectively.',
-    technologies: ['React', 'Typescript', 'Tailwind CSS'],
+    technologies: ['React', 'Typescript', 'Tailwind CSS', 'Vite'],
     link: 'https://github.com/luis-sagx/expense-control.git',
     githubUrl: 'https://github.com/luis-sagx/expense-control.git',
     highlights: [
