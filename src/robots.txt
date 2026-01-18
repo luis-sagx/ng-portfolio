@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ng-portfolio-mu.vercel.app/sitemap.xml
+Sitemap: https://www.luis-sagx.xyz/sitemap.xml
