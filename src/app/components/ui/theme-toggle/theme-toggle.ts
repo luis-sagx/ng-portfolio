@@ -9,28 +9,13 @@ import { CommonModule } from '@angular/common';
   styleUrl: './theme-toggle.css',
 })
 export class ThemeToggle {
-  darkMode = signal(true); // Dark mode por defecto
+  darkMode = signal(true);
 
   constructor() {
     if (typeof window !== 'undefined' && window.localStorage) {
-      const saved = localStorage.getItem('theme');
-      // Si el usuario nunca ha configurado el tema, usar oscuro por defecto
-      if (saved === 'light') {
-        this.darkMode.set(false);
-        document.documentElement.classList.remove('dark');
-      } else {
-        // Por defecto o si es 'dark', activar modo oscuro
-        this.darkMode.set(true);
-        document.documentElement.classList.add('dark');
-        if (!saved) {
-          localStorage.setItem('theme', 'dark');
-        }
-      }
-    } else {
-      // Para SSR, activar modo oscuro por defecto
-      if (typeof document !== 'undefined') {
-        document.documentElement.classList.add('dark');
-      }
+      // Leer el estado actual del DOM (ya aplicado por el script inline)
+      const isDark = document.documentElement.classList.contains('dark');
+      this.darkMode.set(isDark);
     }
   }
 

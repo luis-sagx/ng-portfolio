@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -16,6 +16,31 @@
     <meta name="author" content="Luis Sagnay" />
     <meta name="theme-color" content="#0f766e" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script>
+      // Aplicar tema inmediatamente antes de que se renderice el contenido
+      (function () {
+        try {
+          const saved = localStorage.getItem("theme");
+          const systemPrefersDark = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+          ).matches;
+
+          // Si el usuario ha guardado una preferencia o sino la del sistema
+          const shouldBeDark = saved ? saved === "dark" : systemPrefersDark;
+
+          if (shouldBeDark) {
+            document.documentElement.classList.add("dark");
+            if (!saved) localStorage.setItem("theme", "dark");
+          } else {
+            document.documentElement.classList.remove("dark");
+            if (!saved) localStorage.setItem("theme", "light");
+          }
+        } catch (e) {
+          // Fallback: modo oscuro por defecto si hay error
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
@@ -29,7 +54,10 @@
       rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript
       ><link
