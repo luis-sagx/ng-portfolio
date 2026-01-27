@@ -16,30 +16,18 @@
     <meta name="author" content="Luis Sagnay" />
     <meta name="theme-color" content="#0f766e" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4PXRC9K062"
+    ></script>
     <script>
-      // Aplicar tema inmediatamente antes de que se renderice el contenido
-      (function () {
-        try {
-          const saved = localStorage.getItem("theme");
-          const systemPrefersDark = window.matchMedia(
-            "(prefers-color-scheme: dark)",
-          ).matches;
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-          // Si el usuario ha guardado una preferencia o sino la del sistema
-          const shouldBeDark = saved ? saved === "dark" : systemPrefersDark;
-
-          if (shouldBeDark) {
-            document.documentElement.classList.add("dark");
-            if (!saved) localStorage.setItem("theme", "dark");
-          } else {
-            document.documentElement.classList.remove("dark");
-            if (!saved) localStorage.setItem("theme", "light");
-          }
-        } catch (e) {
-          // Fallback: modo oscuro por defecto si hay error
-          document.documentElement.classList.add("dark");
-        }
-      })();
+      gtag("config", "G-4PXRC9K062");
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
