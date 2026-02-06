@@ -1,7 +1,12 @@
 <section id="projects" class="px-6 py-20 bg-gray-50 dark:bg-gray-950">
   <div class="mx-auto max-w-7xl">
     <!-- Section Header -->
-    <div class="mb-16 text-center">
+    <div
+      class="mb-16 text-center"
+      appScrollAnimation
+      [animationType]="'fade-down'"
+      [animationDelay]="0"
+    >
       <div class="inline-block mb-4">
         <span
           class="text-sm font-semibold tracking-wider uppercase text-emerald-600 dark:text-emerald-400"
@@ -23,15 +28,21 @@
     <!-- Projects Grid -->
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       @for (project of projects; track project.title) {
-      <app-project-card
-        [title]="project.title"
-        [description]="project.description"
-        [image]="project.image"
-        [github]="project.githubUrl"
-        [link]="project.link"
-        [tags]="project.technologies"
-        [highlights]="project.highlights"
-      ></app-project-card>
+      <div
+        appScrollAnimation
+        [animationType]="'scale-in'"
+        [animationDelay]="100"
+      >
+        <app-project-card
+          [title]="project.title"
+          [description]="project.description"
+          [image]="project.image"
+          [github]="project.githubUrl"
+          [link]="project.link"
+          [tags]="project.technologies"
+          [highlights]="project.highlights"
+        ></app-project-card>
+      </div>
       }
     </div>
   </div>

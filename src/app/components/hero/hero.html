@@ -15,7 +15,12 @@
   <div class="relative max-w-6xl mx-auto">
     <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
       <!-- Profile Image -->
-      <div class="flex justify-center order-1 lg:justify-end lg:order-2">
+      <div
+        class="flex justify-center order-1 lg:justify-end lg:order-2"
+        appScrollAnimation
+        [animationType]="'fade-left'"
+        [animationDelay]="200"
+      >
         <div class="relative group">
           <!-- Glow effect -->
           <div
@@ -36,7 +41,12 @@
       </div>
 
       <!-- Content -->
-      <div class="order-2 space-y-6 text-center lg:text-left lg:order-1">
+      <div
+        class="order-2 space-y-6 text-center lg:text-left lg:order-1"
+        appScrollAnimation
+        [animationType]="'fade-right'"
+        [animationDelay]="100"
+      >
         <!-- Greeting -->
         <div class="inline-block">
           <span

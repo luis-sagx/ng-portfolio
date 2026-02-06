@@ -4,7 +4,12 @@
 >
   <div class="mx-auto max-w-7xl">
     <!-- Section Header -->
-    <div class="mb-16 text-center">
+    <div
+      class="mb-16 text-center"
+      appScrollAnimation
+      [animationType]="'fade-down'"
+      [animationDelay]="0"
+    >
       <div class="inline-block mb-4">
         <span
           class="text-sm font-semibold tracking-wider uppercase text-emerald-600 dark:text-emerald-400"
@@ -30,6 +35,9 @@
         <!-- Education Card -->
         <div
           class="p-6 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
+          appScrollAnimation
+          [animationType]="'fade-right'"
+          [animationDelay]="100"
         >
           <div class="flex items-center gap-3 mb-4">
             <div
@@ -59,6 +67,9 @@
         <!-- Languages Card -->
         <div
           class="p-6 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
+          appScrollAnimation
+          [animationType]="'fade-right'"
+          [animationDelay]="200"
         >
           <div class="flex items-center gap-3 mb-4">
             <div
@@ -90,6 +101,9 @@
       <div>
         <div
           class="h-full p-6 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
+          appScrollAnimation
+          [animationType]="'fade-left'"
+          [animationDelay]="150"
         >
           <div class="flex items-center gap-3 mb-4">
             <div
@@ -130,6 +144,9 @@
 
     <div
       class="p-8 mb-8 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
+      appScrollAnimation
+      [animationType]="'fade-up'"
+      [animationDelay]="100"
     >
       <div class="flex items-center gap-3 mb-8">
         <div
@@ -171,6 +188,9 @@
 
     <div
       class="p-8 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
+      appScrollAnimation
+      [animationType]="'fade-up'"
+      [animationDelay]="200"
     >
       <div class="flex items-center gap-3 mb-4">
         <div
