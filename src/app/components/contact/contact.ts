@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { CONTACT_INFO } from '../../core/constants';
 import { ContactInfo } from '../../core/models/portfolio.model';
-import { ScrollAnimationDirective } from '../../shared/directives/scroll-animation.directive';
 
 @Component({
   selector: 'app-contact',
-  imports: [ScrollAnimationDirective],
+  imports: [],
   templateUrl: './contact.html',
   styleUrl: './contact.css',
 })

@@ -12,11 +12,10 @@ import {
   Course,
   Language,
 } from '../../core/models/portfolio.model';
-import { ScrollAnimationDirective } from '../../shared/directives/scroll-animation.directive';
 
 @Component({
   selector: 'app-about',
-  imports: [CommonModule, ScrollAnimationDirective],
+  imports: [CommonModule],
   templateUrl: './about.html',
   styleUrl: './about.css',
 })
