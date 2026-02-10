@@ -2,7 +2,7 @@
   id="about-me"
   class="px-6 py-20 bg-gradient-to-br from-gray-100 via-emerald-50/30 to-teal-50/30 dark:from-gray-900 dark:via-emerald-950/10 dark:to-teal-950/10"
 >
-  <div class="mx-auto max-w-7xl">
+  <div class="max-w-[75rem] mx-auto">
     <!-- Section Header -->
     <div class="mb-16 text-center" data-aos="fade-down" data-aos-delay="0">
       <div class="inline-block mb-4">
@@ -23,13 +23,12 @@
       </h2>
     </div>
 
-    <!-- Education, Languages & Certifications -->
-    <div class="grid gap-6 mb-8 lg:grid-cols-2">
+    <div class="grid items-start gap-6 mb-8 lg:grid-cols-2">
       <!-- Left Column -->
-      <div class="space-y-6">
-        <!-- Education Card -->
+      <div class="space-y-8">
+        <!-- Education -->
         <div
-          class="p-6 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
+          class="px-6 py-8 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
           data-aos="fade-right"
           data-aos-delay="100"
         >
@@ -58,9 +57,9 @@
           }
         </div>
 
-        <!-- Languages Card -->
+        <!-- Languages -->
         <div
-          class="p-6 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
+          class="px-6 py-8 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
           data-aos="fade-right"
           data-aos-delay="200"
         >
@@ -93,7 +92,7 @@
       <!-- Right Column -->
       <div>
         <div
-          class="h-full p-6 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
+          class="p-6 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
           data-aos="fade-left"
           data-aos-delay="150"
         >
@@ -109,8 +108,20 @@
           </div>
           <div class="space-y-4">
             @for (course of courses; track course.title) {
-            <div class="flex items-start justify-between gap-2">
-              <div>
+            <div class="flex items-start gap-3">
+              @if (course.icon) {
+              <div class="flex-shrink-0">
+                <img
+                  [src]="course.icon"
+                  [alt]="course.provider + ' logo'"
+                  class="object-contain w-10 h-10 rounded-sm dark:bg-gray-100 p-0.5"
+                  loading="lazy"
+                />
+              </div>
+              }
+
+              <!-- Course Info -->
+              <div class="flex-1 min-w-0">
                 <p class="text-sm font-medium text-gray-700 dark:text-gray-300">
                   {{ course.title }}
                 </p>
@@ -118,6 +129,8 @@
                   {{ course.provider }}
                 </p>
               </div>
+
+              <!-- Certificate Link -->
               <a
                 [href]="course.certificateUrl"
                 target="_blank"

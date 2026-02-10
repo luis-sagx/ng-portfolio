@@ -38,6 +38,7 @@ export interface Course {
   provider: string;
   year?: number;
   certificateUrl?: string;
+  icon?: string;
 }
 
 export interface SocialLink {
