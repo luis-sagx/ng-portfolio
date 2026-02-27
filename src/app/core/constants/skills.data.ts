@@ -9,7 +9,6 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       { name: 'JavaScript' },
       { name: 'TypeScript' },
       { name: 'Python' },
-      { name: 'C++' },
       { name: 'C#' },
     ],
   },
@@ -29,7 +28,6 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     icon: 'fa-solid fa-server',
     skills: [
       { name: 'Node.js' },
-      { name: 'Express' },
       { name: 'Spring Boot' },
       { name: 'Flask' },
       { name: 'ASP.NET Core' },
@@ -52,11 +50,9 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     icon: 'fa-solid fa-wrench',
     skills: [
       { name: 'Git' },
-      { name: 'GitHub' },
       { name: 'Docker' },
       { name: 'Linux' },
       { name: 'Postman' },
-      { name: 'VS Code' },
     ],
   },
 ];

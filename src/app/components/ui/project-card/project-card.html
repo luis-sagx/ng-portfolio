@@ -41,7 +41,7 @@
   <div class="flex flex-col flex-1 p-6">
     <!-- Title -->
     <h3
-      class="mb-3 text-xl font-bold text-gray-900 transition-colors duration-300 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 line-clamp-2"
+      class="mb-3 text-xl font-bold text-gray-900 transition-colors duration-300 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 line-clamp-2 font-display"
     >
       {{ title }}
     </h3>
@@ -74,7 +74,7 @@
     <div class="flex flex-wrap gap-2 mb-6">
       @for (tag of tags; track tag; let idx = $index) {
       <span
-        class="px-3 py-1 text-xs font-medium border rounded-lg bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/50"
+        class="px-3 py-1 text-xs font-medium border rounded-lg bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/50 font-mono"
       >
         {{ tag }}
       </span>

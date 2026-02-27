@@ -1,18 +1,13 @@
-<section
-  id="about-me"
-  class="px-6 py-20 bg-gradient-to-br from-gray-100 via-emerald-50/30 to-teal-50/30 dark:from-gray-900 dark:via-emerald-950/10 dark:to-teal-950/10"
->
-  <div class="max-w-[75rem] mx-auto">
+<section id="about-me" class="px-6 py-24 bg-gray-50 dark:bg-gray-950">
+  <div class="max-w-6xl mx-auto">
     <!-- Section Header -->
-    <div class="mb-16 text-center" data-aos="fade-down" data-aos-delay="0">
-      <div class="inline-block mb-4">
-        <span
-          class="text-sm font-semibold tracking-wider uppercase text-emerald-600 dark:text-emerald-400"
-          >Get to know me</span
-        >
-      </div>
+    <div class="mb-20 text-center" data-aos="fade-down" data-aos-delay="0">
+      <span
+        class="text-sm font-semibold tracking-wider uppercase text-emerald-600 dark:text-emerald-400"
+        >Get to know me</span
+      >
       <h2
-        class="mb-4 text-4xl font-bold text-gray-900 lg:text-5xl dark:text-white"
+        class="text-4xl font-bold text-gray-900 lg:text-5xl dark:text-white font-display"
       >
         About
         <span
@@ -23,166 +18,41 @@
       </h2>
     </div>
 
-    <div class="grid items-start gap-6 mb-8 lg:grid-cols-2">
-      <!-- Left Column -->
-      <div class="space-y-8">
-        <!-- Education -->
+    <!-- ═══ TECHNICAL SKILLS ═══ -->
+    <div class="mb-20" data-aos="fade-up" data-aos-delay="100">
+      <div class="flex items-center gap-3 mb-10">
         <div
-          class="px-6 py-8 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
-          data-aos="fade-right"
-          data-aos-delay="100"
+          class="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500"
         >
-          <div class="flex items-center gap-3 mb-4">
-            <div
-              class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500"
-            >
-              <i class="text-xl text-white fas fa-graduation-cap"></i>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white">
-              Education
-            </h3>
-          </div>
-          @for (edu of education; track edu.institution) {
-          <div class="space-y-2">
-            <p class="font-semibold text-emerald-600 dark:text-emerald-400">
-              {{ edu.degree }}
-            </p>
-            <p class="text-sm font-medium text-gray-700 dark:text-gray-300">
-              {{ edu.institution }}
-            </p>
-            <p class="text-sm text-gray-500 dark:text-gray-500">
-              {{ edu.period }}
-            </p>
-          </div>
-          }
+          <i class="text-white fas fa-code"></i>
         </div>
-
-        <!-- Languages -->
-        <div
-          class="px-6 py-8 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
-          data-aos="fade-right"
-          data-aos-delay="200"
+        <h3
+          class="text-2xl font-bold text-gray-900 dark:text-white font-display"
         >
-          <div class="flex items-center gap-3 mb-4">
-            <div
-              class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-emerald-500"
-            >
-              <i class="text-xl text-white fas fa-language"></i>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white">
-              Languages
-            </h3>
-          </div>
-          <div class="space-y-3">
-            @for (language of languages; track language.name) {
-            <div class="flex items-center justify-between">
-              <span class="font-medium text-gray-700 dark:text-gray-300"
-                >{{ language.name }}</span
-              >
-              <span
-                class="text-sm font-semibold text-emerald-600 dark:text-emerald-400"
-                >{{ language.proficiency }}</span
-              >
-            </div>
-            }
-          </div>
-        </div>
-      </div>
-
-      <!-- Right Column -->
-      <div>
-        <div
-          class="p-6 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
-          data-aos="fade-left"
-          data-aos-delay="150"
-        >
-          <div class="flex items-center gap-3 mb-4">
-            <div
-              class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500"
-            >
-              <i class="text-xl text-white fas fa-certificate"></i>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white">
-              Certifications
-            </h3>
-          </div>
-          <div class="space-y-4">
-            @for (course of courses; track course.title) {
-            <div class="flex items-start gap-3">
-              @if (course.icon) {
-              <div class="flex-shrink-0">
-                <img
-                  [src]="course.icon"
-                  [alt]="course.provider + ' logo'"
-                  class="object-contain w-10 h-10 rounded-sm dark:bg-gray-100 p-0.5"
-                  loading="lazy"
-                />
-              </div>
-              }
-
-              <!-- Course Info -->
-              <div class="flex-1 min-w-0">
-                <p class="text-sm font-medium text-gray-700 dark:text-gray-300">
-                  {{ course.title }}
-                </p>
-                <p class="mt-1 text-xs text-gray-500 dark:text-gray-500">
-                  {{ course.provider }}
-                </p>
-              </div>
-
-              <!-- Certificate Link -->
-              <a
-                [href]="course.certificateUrl"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center justify-center flex-shrink-0 w-8 h-8 transition-all duration-200 rounded-lg text-emerald-600 dark:text-emerald-400 hover:bg-emerald-100 dark:hover:bg-emerald-950/30 hover:scale-110"
-                title="View Certificate"
-              >
-                <i class="text-sm fas fa-external-link-alt"></i>
-              </a>
-            </div>
-            }
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="p-8 mb-8 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
-      data-aos="fade-up"
-      data-aos-delay="100"
-    >
-      <div class="flex items-center gap-3 mb-8">
-        <div
-          class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500"
-        >
-          <i class="text-xl text-white fas fa-code"></i>
-        </div>
-        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
           Technical Skills
         </h3>
       </div>
 
-      <div class="grid gap-8 md:grid-cols-2">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
         @for (category of skillCategories; track category.title) {
         <div>
           <div class="flex items-center gap-2 mb-4">
             <i
-              class="{{ category.icon }} text-emerald-600 dark:text-emerald-400 text-lg"
+              class="{{ category.icon }} text-emerald-600 dark:text-emerald-400"
             ></i>
-            <h4 class="text-lg font-bold text-gray-800 dark:text-gray-200">
+            <h4
+              class="text-sm font-bold tracking-wide text-gray-500 uppercase dark:text-gray-400"
+            >
               {{ category.title }}
             </h4>
           </div>
           <div class="flex flex-wrap gap-2">
             @for (skill of category.skills; track skill.name) {
-            <div
-              class="px-4 py-2 transition-all duration-300 border rounded-lg bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 border-emerald-200 dark:border-emerald-800/50 hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-lg hover:scale-105"
+            <span
+              class="px-3 py-1.5 text-sm font-medium rounded-lg bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-800 hover:border-emerald-400 dark:hover:border-emerald-600 transition-colors font-mono"
             >
-              <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">
-                {{ skill.name }}
-              </p>
-            </div>
+              {{ skill.name }}
+            </span>
             }
           </div>
         </div>
@@ -190,52 +60,170 @@
       </div>
     </div>
 
+    <!-- Divider -->
     <div
-      class="p-8 bg-white border border-gray-200 shadow-xl dark:bg-gray-900 rounded-2xl dark:border-gray-800"
-      data-aos="fade-up"
-      data-aos-delay="200"
-    >
-      <div class="flex items-center gap-3 mb-4">
-        <div
-          class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500"
-        >
-          <i class="text-xl text-white fas fa-heart"></i>
+      class="w-16 h-px mx-auto mb-20 bg-gradient-to-r from-transparent via-emerald-400 to-transparent"
+    ></div>
+
+    <!-- ═══ 3-COLUMN GRID: Education, Certifications, Languages ═══ -->
+    <div class="grid gap-12 mb-20 lg:grid-cols-3">
+      <!-- Education -->
+      <div data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center gap-3 mb-6">
+          <div
+            class="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500"
+          >
+            <i class="text-white fas fa-graduation-cap"></i>
+          </div>
+          <h3
+            class="text-xl font-bold text-gray-900 dark:text-white font-display"
+          >
+            Education
+          </h3>
         </div>
-        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-          Beyond Code
+        <div class="space-y-5">
+          @for (edu of education; track edu.institution) {
+          <div
+            class="relative pl-5 border-l-2 border-emerald-300 dark:border-emerald-700"
+          >
+            <div
+              class="absolute w-3 h-3 rounded-full -left-[7px] top-1 bg-emerald-500"
+            ></div>
+            <p class="text-base font-semibold text-gray-900 dark:text-white">
+              {{ edu.degree }}
+            </p>
+            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+              {{ edu.institution }}
+            </p>
+            <p
+              class="mt-1 text-xs font-medium text-emerald-600 dark:text-emerald-400"
+            >
+              {{ edu.period }}
+            </p>
+          </div>
+          }
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-center gap-3 mb-6">
+          <div
+            class="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-teal-500 to-emerald-500"
+          >
+            <i class="text-white fas fa-language"></i>
+          </div>
+          <h3
+            class="text-xl font-bold text-gray-900 dark:text-white font-display"
+          >
+            Languages
+          </h3>
+        </div>
+        <div class="space-y-4">
+          @for (language of languages; track language.name) {
+          <div
+            class="flex items-center justify-between p-3 bg-white border border-gray-100 rounded-lg dark:bg-gray-900 dark:border-gray-800/50"
+          >
+            <span class="font-medium text-gray-800 dark:text-gray-200"
+              >{{ language.name }}</span
+            >
+            <span
+              class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300"
+              >{{ language.proficiency }}</span
+            >
+          </div>
+          }
+        </div>
+      </div>
+
+      <!-- Beyond Code -->
+      <div data-aos="fade-up" data-aos-delay="300">
+        <div class="flex items-center gap-3 mb-6">
+          <div
+            class="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500"
+          >
+            <i class="text-white fas fa-heart"></i>
+          </div>
+          <h3
+            class="text-xl font-bold text-gray-900 dark:text-white font-display"
+          >
+            Beyond Code
+          </h3>
+        </div>
+        <p
+          class="mb-5 text-sm leading-relaxed text-gray-600 dark:text-gray-400"
+        >
+          In my free time, I enjoy staying active by playing sports and soccer.
+          I also greatly value time with family and friends.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span
+            class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-100 rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-800/50"
+          >
+            <i class="text-emerald-500 fas fa-futbol"></i>
+            Soccer
+          </span>
+          <span
+            class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-100 rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-800/50"
+          >
+            <i class="text-emerald-500 fas fa-dumbbell"></i>
+            Exercise
+          </span>
+          <span
+            class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-100 rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-800/50"
+          >
+            <i class="text-emerald-500 fas fa-book"></i>
+            Reading
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ CERTIFICATIONS ═══ -->
+    <div data-aos="fade-up" data-aos-delay="100">
+      <div class="flex items-center gap-3 mb-8">
+        <div
+          class="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500"
+        >
+          <i class="text-white fas fa-certificate"></i>
+        </div>
+        <h3
+          class="text-2xl font-bold text-gray-900 dark:text-white font-display"
+        >
+          Certifications
         </h3>
       </div>
-      <p class="mb-6 leading-relaxed text-gray-600 dark:text-gray-400">
-        In my free time, I enjoy staying active by playing sports and soccer. I
-        also greatly value time with family and friends. I like to relax by
-        watching good movies and expressing my creativity by playing guitar,
-        which allows me to disconnect and recharge.
-      </p>
-      <div class="flex flex-wrap gap-3">
-        <span
-          class="flex items-center gap-2 px-4 py-2 text-sm font-semibold border rounded-lg bg-emerald-100 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/50"
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        @for (course of courses; track course.title) {
+        <a
+          [href]="course.certificateUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-4 p-4 transition-all duration-200 bg-white border border-gray-100 rounded-xl dark:bg-gray-900 dark:border-gray-800/50 hover:border-emerald-300 dark:hover:border-emerald-700 group hover:shadow-sm"
         >
-          <i class="fas fa-futbol"></i>
-          Soccer
-        </span>
-        <span
-          class="flex items-center gap-2 px-4 py-2 text-sm font-semibold border rounded-lg bg-emerald-100 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/50"
-        >
-          <i class="fas fa-guitar"></i>
-          Guitar
-        </span>
-        <span
-          class="flex items-center gap-2 px-4 py-2 text-sm font-semibold border rounded-lg bg-emerald-100 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/50"
-        >
-          <i class="fas fa-dumbbell"></i>
-          Excercice
-        </span>
-        <span
-          class="flex items-center gap-2 px-4 py-2 text-sm font-semibold border rounded-lg bg-emerald-100 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/50"
-        >
-          <i class="fas fa-book"></i>
-          Read
-        </span>
+          @if (course.icon) {
+          <img
+            [src]="course.icon"
+            [alt]="course.provider + ' logo'"
+            class="object-contain w-10 h-10 rounded-lg dark:bg-gray-100 p-0.5 flex-shrink-0"
+            loading="lazy"
+          />
+          }
+          <div class="flex-1 min-w-0">
+            <p
+              class="text-sm font-semibold text-gray-800 truncate transition-colors dark:text-gray-200 group-hover:text-emerald-600 dark:group-hover:text-emerald-400"
+            >
+              {{ course.title }}
+            </p>
+            <p class="mt-0.5 text-xs text-gray-500 dark:text-gray-500">
+              {{ course.provider }}
+            </p>
+          </div>
+          <i
+            class="text-xs text-gray-400 transition-colors fas fa-arrow-up-right-from-square group-hover:text-emerald-500"
+          ></i>
+        </a>
+        }
       </div>
     </div>
   </div>

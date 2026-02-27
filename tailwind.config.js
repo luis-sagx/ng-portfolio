@@ -7,8 +7,9 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-                display: ['Poppins', 'Inter', 'sans-serif'],
+                sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+                display: ['Outfit', '"Plus Jakarta Sans"', 'sans-serif'],
+                mono: ['"JetBrains Mono"', 'monospace'],
             },
         },
     },
