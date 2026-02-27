@@ -1,5 +1,5 @@
 <article
-  class="relative flex flex-col h-full overflow-hidden transition-all duration-500 bg-white border border-gray-200 group dark:bg-gray-900 rounded-2xl dark:border-gray-800 hover:border-emerald-500/50 dark:hover:border-emerald-500/50 hover:shadow-2xl hover:shadow-emerald-500/10 dark:hover:shadow-emerald-500/20"
+  class="relative flex flex-col h-full overflow-hidden transition-all duration-500 bg-white border shadow-lg border-gray-200/80 group dark:bg-gray-900 rounded-2xl dark:border-gray-800 hover:border-emerald-500/50 dark:hover:border-emerald-500/50 hover:shadow-2xl hover:shadow-emerald-500/10 dark:hover:shadow-emerald-500/20"
 >
   <!-- Image Container with Overlay -->
   <div
@@ -74,7 +74,7 @@
     <div class="flex flex-wrap gap-2 mb-6">
       @for (tag of tags; track tag; let idx = $index) {
       <span
-        class="px-3 py-1 text-xs font-medium border rounded-lg bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/50 font-mono"
+        class="px-3 py-1 font-mono text-xs font-medium border rounded-lg bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/50"
       >
         {{ tag }}
       </span>
